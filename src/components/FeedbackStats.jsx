@@ -6,8 +6,6 @@ import FeedbackContext from "../context/FeedbackContext";
 function FeedbackStats() {
   const { feedback } = useContext(FeedbackContext);
 
-  // NOTE: simpler average calculation
-  // Calculate ratings avg
   const average = Math.round(
     feedback.reduce((acc, { rating }) => acc + rating, 0) / feedback.length
   );
